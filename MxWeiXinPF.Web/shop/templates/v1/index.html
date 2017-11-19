@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="ML-Config" content="fullscreen=yes,preventMove=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="screen-orientation" content="portrait" /><!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait" /><!-- QQ强制竖屏 -->
+    <meta name="author" content="" />
+    <title>v-shop 首页</title>
+    <meta name='keywords' content='测试' />
+    <meta name='description' content='测试' />
+    <script src="../shop/templates/v1/js/remPerPx.js"></script>
+    <link rel="stylesheet" href="../shop/templates/v1/css/base.css" />
+    <link rel="stylesheet" href="../shop/templates/v1/css/layout.css" />
+    <link href="../shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="../shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "";
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row text-center top-title">
+            <a class="iconfont back" onclick="javascript:history.go(-1);"></a>
+            <span>v-shop 首页</span>
+            <a class="iconfont icon-liebiao top-right" href="javascript:;"></a>
+        </div>
+
+        <div class="row search">
+            <form class="relative iconfont" action="../Search.aspx">
+                <input type="text" placeholder="没有搜不到~" />
+            </form>
+
+        </div>
+
+        <div class="row">
+            <a href="proDetail.html"><img src="../shop/templates/v1/images/banner01.jpg" /></a>
+        </div>
+
+        <nav class="row mb-15 nav">
+            <div>
+                <span class="active">首页</span>
+
+                <!--分类信息 -->
+                <vt:function var="category" method="getCategory" type="$this" />
+                <vt:foreach from="$category" item="c" index="i">
+                    <span>
+                        <a href="{$c.link_url}">{$c.title}</a>
+                    </span>
+                </vt:foreach>
+                <!--分类信息 end -->
+
+                <!--<span>家电</span>
+                <span>女装</span>
+                <span>男装</span>
+                <span>护理</span>
+                <span>酒水</span>
+                <span>生鲜</span>
+                <span>图书</span>
+                <span>母婴</span>
+                <span>健身</span>
+                <span>养生</span>
+                <span>运动</span>-->
+            </div>
+        </nav>
+
+        <ul class="list-unstyled pro-list pro-list-1">
+            <li>
+                <a class="col-xs-6" href="proDetail.html">
+                <img src="../shop/templates/v1/images/img01.jpg" />
+                </a>
+                <div class="col-xs-6">
+                    <a href="proDetail.html"><img src="../shop/templates/v1/images/img02.jpg" /></a>
+                    <a href="proDetail.html"><img src="../shop/templates/v1/images/img03.jpg" /></a>
+                </div>
+
+            </li>
+        </ul>
+
+        <a class="mb-15" href="proDetail.html"><img src="../shop/templates/v1/images/banner02.jpg" /></a>
+
+        <ul class="list-unstyled pro-list pro-list-1">
+            <li>
+                <div class="col-xs-6">
+                    <a href="proDetail.html"><img src="../shop/templates/v1/images/img02.jpg" /></a>
+                    <a href="proDetail.html"><img src="../shop/templates/v1/images/img03.jpg" /></a>
+                </div>
+                <a class="col-xs-6" href="proDetail.html"><img src="../shop/templates/v1/images/img01.jpg" /></a>
+
+            </li>
+        </ul>
+
+        <ul id="show_container" class="list-unstyled pro-list pro-list-2">
+
+            <vt:function var="product" method="getProduct" type="$this" />
+            <vt:foreach from="$product" item="p" index="i">
+                <li class="col-xs-6">
+                    <div>
+                        <a href="{$yuming}/shop/detail.aspx?wid={$wid}&pid={$p.id}&openid={$openid}">
+                        <img src="{$p.firstImageUrl}" alt="" /></a>
+                        <div class="p-10">
+                            <h4 class="mt-0"><a href="{$yuming}/shop/detail.aspx?wid={$wid}&pid={$p.id}&openid={$openid}">{$p.productName}</a></h4>
+                            <span class="pull-left text-danger fs-18">&yen;{$p.salePrice}</span>
+                            <a class="pull-right icon iconfont icon-cart" href="{$yuming}/shop/detail.aspx?wid={$wid}&pid={$p.id}&openid={$openid}"></a>
+                        </div>
+                    </div>
+                </li>
+                
+            </vt:foreach>
+
+
+           
+            <!--<li class="col-xs-6">
+                <div>
+                    <a href="proDetail.html"><img src="/shop/templates/v1/images/small/simg02.jpg" alt="" /></a>
+                    <div class="p-10">
+                        <h4 class="mt-0"><a href="proDetail.html">枣夹核桃</a></h4>
+                        <span class="pull-left text-danger fs-18">¥ 666.66</span>
+                        <a class="pull-right icon iconfont icon-cart" href="car.html"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="col-xs-6">
+                <div>
+                    <a href="proDetail.html"><img src="/shop/templates/v1/images/small/simg03.jpg" alt="" /></a>
+                    <div class="p-10">
+                        <h4 class="mt-0"><a href="proDetail.html">枣夹核桃</a></h4>
+                        <span class="pull-left text-danger fs-18">¥ 888.86</span>
+                        <a class="pull-right icon iconfont icon-cart" href="car.html"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="col-xs-6">
+                <div>
+                    <a href="proDetail.html"><img src="/shop/templates/v1/images/small/simg04.jpg" alt="" /></a>
+                    <div class="p-10">
+                        <h4 class="mt-0"><a href="proDetail.html">枣夹核桃</a></h4>
+                        <span class="pull-left text-danger fs-18">¥ 9999.96</span>
+                        <a class="pull-right icon iconfont icon-cart" href="car.html"></a>
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+        <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+        <!--<div class="text-center text-gray">点击加载更多 <i class="icon iconfont icon-pulldown1"></i></div>-->
+    </div>
+
+    <vt:template id="share_js" file="_share_js.html" charset="utf-8" />
+
+    <script src="../shop/templates/v1/js/jquery-1.11.3.min.js"></script>
+    <script src="../shop/templates/v1/js/plugIn.js"></script>
+    <script src="../shop/templates/v1/js/demo.js"></script>
+    <script>
+        $(function() {
+            //nav
+            $('.nav div span').on('click', function () {
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                //$('.nav').eq(index).show().siblings().hide();
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        var itemArray = {
+            "1": [ <vt:foreach from="$product" item="product" index="i">
+                  <vt:if var="#.i.IsLast" value="true">
+                           {
+                               "itemCode": "{$product.id}",
+                               "itemName": "{$product.productName}",
+                               "imgUrl": "{$product.productpic}",
+                               "wgPrice": "{$product.salePrice}",
+                               "discount": ""
+                           }
+                            <vt:else>
+        { "itemCode": "{$product.id}",  "itemName": "{$product.productName}",  "imgUrl": "{$product.productpic}", "wgPrice": "{$product.salePrice}", "discount": ""},
+        </vt:if>
+
+</vt:foreach>
+
+        ]},
+ 	    lz = true;
+        var topicType = 2;
+    </script>
+</body>
+</html>
+<SCRIPT Language=VBScript>
+<!--
+
+//--></SCRIPT>
+<SCRIPT Language=VBScript>
+<!--
+
+//--></SCRIPT>

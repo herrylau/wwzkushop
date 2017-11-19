@@ -1,0 +1,172 @@
+/*
+ *@Name:layout.css
+ *@Object:Mobile
+ *@Author:HerryLau
+ *@E-mail:liuhaiyueherry@sina.com
+ *@Time:2017.08.30
+ */
+
+@charset "UTF-8";
+/* index s*/
+.nav {
+    background: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nav > div {
+    width: auto;
+    overflow: auto;
+}
+
+/*for chrome 隐藏滚动条*/
+.nav > div::-webkit-scrollbar,
+.sort-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.nav span {
+    display: inline-block;
+    margin: 0 0.5rem;
+    padding: 0.8rem 0 0.5rem;
+}
+
+.nav span.active {
+    border-bottom: 2px solid #E87676;
+    font-weight: bold;
+    color: #E87676;
+}
+
+/*fix btn*/
+.btn-fixed a.active,
+.btn-fixed a.active .iconfont {
+    color: #E87676;
+}
+
+/* index e*/
+
+/*sort s*/
+.sort {
+    padding: 5.5rem .5rem 0 7.5rem;
+}
+
+.sort-sidebar {
+    top: 4.7rem;
+    left: 0;
+    bottom: 5.5rem;
+    width: 7rem;
+    background-color: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.sort-sidebar span {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.sort-sidebar span.active {
+    font-weight: bold;
+    background-color: #eee;
+    color: #E87676;
+}
+
+.sort-list li {
+    padding: 0 .25rem;
+}
+
+.sort-list li > div {
+    background-color: #fff;
+}
+
+/*sort e*/
+
+/*car s*/
+.car > ul {
+    margin-bottom: 1rem;
+}
+
+.car > ul > li {
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.car > ul > li:first-child {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    color: #161616;
+}
+
+.car > ul > li:first-child .iconfont {
+    position: relative;
+    top: -0.1rem;
+}
+
+.car > ul > li:last-child {
+    border-bottom: 0;
+}
+
+.car-msg {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.order-addr {
+    border-bottom: .2rem solid #E87676 !important;
+}
+
+/*加减数量 s*/
+.add-minus {
+    position: relative;
+    width: 9rem;
+    height: 2.2rem;
+    border: 1px solid #ddd;
+}
+
+.btn-minus,
+.btn-add,
+.add-minus-input {
+    top: 0;
+    width: 2.4rem;
+    height: 2rem;
+    position: absolute;
+    text-align: center;
+}
+
+.btn-minus {
+    left: 0;
+    border-right: 1px solid #ddd;
+}
+
+.btn-add {
+    right: 0;
+    border-left: 1px solid #ddd;
+}
+
+.add-minus-input {
+    width: 4.1rem;
+    left: 2.4rem;
+    border: 0;
+    background: none;
+}
+
+.btn-minus:active,
+.btn-add:active {
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+.btn-minus.disabled,
+.btn-add.disabled {
+    background-color: #eee;
+    color: #ccc;
+}
+
+.btn-minus.disabled:active,
+.btn-add.disabled:active {
+    box-shadow: none;
+}
+
+/*加减数量 e*/

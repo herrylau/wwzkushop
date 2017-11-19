@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="ML-Config" content="fullscreen=yes,preventMove=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="screen-orientation" content="portrait" /><!-- UC强制竖屏 -->
+    <meta name="x5-orientation" content="portrait" /><!-- QQ强制竖屏 -->
+    <meta name="author" content="" />
+    <title>v-shop 搜索</title>
+    <meta name='keywords' content='搜索' />
+    <meta name='description' content='搜索' />
+    <script src="../shop/templates/v1/js/remPerPx.js"></script>
+    <link rel="stylesheet" href="../shop/templates/v1/css/base.css" />
+    <link rel="stylesheet" href="../shop/templates/v1/css/layout.css" />
+    <link href="../shop/templates/default/css/style.css" rel="stylesheet" />
+    <link href="../shop/templates/default/css/templates.css" rel="stylesheet" />
+    <script type="text/javascript">
+        var basePath = "{$yuming}", baseParam = "";
+    </script>
+</head>
+<body>
+    <div class="container" style="height:100%">
+        <!--_header-->
+        <vt:template id="header" file="_header.html" charset="utf-8" />
+        <!--/_header-->
+        <div class="row search">
+            <form class="relative iconfont" action="../Search.aspx">
+                <input type="text" placeholder="没有搜不到~" />
+            </form>
+
+        </div>
+
+        <vt:template id="_bottom" file="_bottom.html" charset="utf-8" />
+    </div>
+</body>
+</html>
+<SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>
